@@ -1,6 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
-import { HomeData } from './common/interfaces/home';
+import { Controller, Get } from '@nestjs/common'
+import { AppService } from './app.service'
+import { HomeData } from './common/interfaces/home'
 
 @Controller()
 export class AppController {
@@ -8,6 +8,6 @@ export class AppController {
 
   @Get()
   getHome(): HomeData {
-    return this.appService.getHomeData();
+    return this.appService.getHomeData()
   }
 }
