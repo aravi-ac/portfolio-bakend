@@ -3,8 +3,7 @@ export const data = {
   created_at: new Date(),
   update_at: new Date(),
   title: 'youtube',
-  description:
-    "A YouTube description refers to the content creator's text to describe their content.",
+  description: "A YouTube description refers to the content creator's text to describe their content.",
   client: 'Google',
   url: 'https://youtube.com/',
   languages: ['java', 'python'],

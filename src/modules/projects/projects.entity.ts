@@ -1,9 +1,10 @@
+import { RandomUUIDOptions } from 'crypto'
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
 export class Projects {
   @PrimaryGeneratedColumn('uuid')
-  id: number
+  id: RandomUUIDOptions
 
   @Column('timestamptz')
   createdAt: Date

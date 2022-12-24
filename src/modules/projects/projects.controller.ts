@@ -1,14 +1,7 @@
-import {
-  Body,
-  Controller,
-  Get,
-  Post,
-  UsePipes,
-  ValidationPipe,
-} from '@nestjs/common'
+import { Body, Controller, Get, Post, UsePipes, ValidationPipe } from '@nestjs/common'
 import { ProjectData } from 'src/common/interfaces/project'
-import { CreateProjectDto } from './dto/project.dto'
-import { ProjectService } from './project.service'
+import { CreateProjectDto } from './dto/projects.dto'
+import { ProjectService } from './projects.service'
 
 @Controller('project')
 export class ProjectController {
@@ -16,12 +9,12 @@ export class ProjectController {
 
   @Get('/')
   getAll(): ProjectData[] {
-    return this.projectService.readAll()
+    return []
   }
 
   @Post('/')
   @UsePipes(new ValidationPipe())
   create(@Body() payload: CreateProjectDto) {
-    return this.projectService.addNew(payload)
+    return this.projectService.createNewProject(payload)
   }
 }
